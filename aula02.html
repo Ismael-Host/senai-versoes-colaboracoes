@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="id1">DOCUMENTO</title>
+</head>
+<style>
+    div#id2 {
+        background: green;
+        width: 4cm;
+        height: 3cm;
+        line-height: 3cm;
+        text-align: center;
+        margin-top: 0.3cm;
+    }
+</style>
+<body>
+    <h1><strong>AULA 02</strong></h1>
+    <div class="class1">APRENDENDO A MANIPULAR 1</div><br/>
+    <div class="class1">APRENDENDO A MANIPULAR 2</div>
+    <div id = 'id2'>INTERA</div>    
+    <script>
+            var id2 = document.querySelector('div#id2')
+            id2.addEventListener('click', clicar)
+            id2.addEventListener('mouseenter', entrar)
+            id2.addEventListener('mouseout', sair)
+            
+        function clicar() {
+
+            id2.innerText = 'CLICOU'
+            id2.style.background = 'green'
+        }
+
+        function entrar() {
+
+            id2.innerText = 'ENTROU'
+            id2.style.background = 'blue'
+        }
+
+        function sair() {
+            id2.innerText = 'SAIU'
+            id2.style.background = 'red'
+        }
+
+        var id1 = document.querySelector('title#id1')
+        id1.innerText = 'AULA 02'
+
+        var class1 = document.getElementsByClassName('class1')[0]
+        class1.style.color = 'green'
+        
+        
+        var class2 = document.getElementsByTagName('h1')[0]
+        class2.style.color = 'red'
+        class2.style.font = 'normal 40pt arial'
+        
+        document.body.style.background = 'black'
+        document.body.style.color = 'white'
+        document.body.style.font = 'normal 15pt arial'
+    </script>
+</body>
+</html>
